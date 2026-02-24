@@ -29,7 +29,7 @@ LEFT JOIN production_records p ON l.lot_id = p.lot_id
 LEFT JOIN inspection_records i ON l.lot_id = i.lot_id
 LEFT JOIN shipping_records   s ON l.lot_id = s.lot_id
 JOIN  data_completeness      c ON l.lot_id = c.lot_id
-WHERE l.lot_id = :lot_id;
+WHERE l.lot_code = 'LOT-20260112-001';
 
 
 -- ============================================================
@@ -53,7 +53,7 @@ FROM lots l
 LEFT JOIN production_records p ON l.lot_id = p.lot_id
 LEFT JOIN inspection_records i ON l.lot_id = i.lot_id
 LEFT JOIN shipping_records   s ON l.lot_id = s.lot_id
-WHERE l.start_date BETWEEN :start_date AND :end_date;
+WHERE l.start_date BETWEEN '2026-01-01' AND '2026-01-31';
 
 
 -- ============================================================
@@ -74,7 +74,7 @@ WHERE l.start_date BETWEEN :start_date AND :end_date;
 -- LEFT JOIN production_records p ON l.lot_id = p.lot_id
 -- LEFT JOIN inspection_records i ON l.lot_id = i.lot_id
 -- LEFT JOIN shipping_records   s ON l.lot_id = s.lot_id
--- WHERE p.production_date BETWEEN :start_date AND :end_date;
+-- WHERE p.production_date BETWEEN '2026-01-01' AND '2026-01-31';
 
 
 -- ============================================================
